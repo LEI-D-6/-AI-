@@ -1,0 +1,16 @@
+# MongoDB导入说明
+
+## 数据库信息
+- 数据库名称: chronic_disease
+- 连接URL: mongodb://localhost:27017
+
+## 导入方法
+### 方法1: 使用Python脚本导入
+1. 确保MongoDB服务已运行
+2. 运行以下命令:
+   python import_mongodb.py
+
+### 方法2: 使用mongoimport工具
+1. 确保mongoimport工具已安装
+2. 对于每个集合，运行:
+   mongoimport --uri {settings.MONGODB_URL}/{settings.MONGODB_DB} --collection <collection_name> --file <collection_file>.json --jsonArray

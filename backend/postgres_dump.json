@@ -1,0 +1,1215 @@
+{
+  "tables": {
+    "users": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "username",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "password_hash",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "full_name",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(7)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        }
+      ],
+      "data": [
+        {
+          "id": 4,
+          "username": "1",
+          "email": "123@qq.com",
+          "password_hash": "$2b$12$LhEJgvTu1HRq4xGH97YFtO0hCjSFgjYhwG8i0glurLQNBMEodRc2G",
+          "full_name": "wda",
+          "role": "PATIENT",
+          "is_active": null,
+          "created_at": "2026-02-14 19:19:00.377747+08:00",
+          "updated_at": null
+        },
+        {
+          "id": 5,
+          "username": "qwe",
+          "email": "1223@qq.com",
+          "password_hash": "$2b$12$EBrel63zN4AbB4ii9aEO8eEJqzj0E/j.xz1TwHDVFTUblEAw.tf7e",
+          "full_name": "qwe",
+          "role": "PATIENT",
+          "is_active": null,
+          "created_at": "2026-02-14 19:20:20.421366+08:00",
+          "updated_at": null
+        },
+        {
+          "id": 6,
+          "username": "doctor1",
+          "email": "doctor1@example.com",
+          "password_hash": "$2b$12$6jW8uHabCnYkRVpGU6.dae5YSz6ZOaWn4FHn7fle7MRFJai0MOF/K",
+          "full_name": "张医生",
+          "role": "DOCTOR",
+          "is_active": null,
+          "created_at": "2026-02-14 20:11:51.408168+08:00",
+          "updated_at": null
+        },
+        {
+          "id": 7,
+          "username": "q",
+          "email": "xinqiang1231@outlook.com",
+          "password_hash": "$2b$12$xKjWoLdOEvoFKtUVcGU3YeBScVczLqg7yQMQ9q.OVMUNuJ0i8YORC",
+          "full_name": "q",
+          "role": "DOCTOR",
+          "is_active": true,
+          "created_at": "2026-03-04 09:31:18.904399+08:00",
+          "updated_at": "2026-03-04 09:31:18.904399+08:00"
+        },
+        {
+          "id": 10,
+          "username": "zhangdoctor",
+          "email": "zhangdoctor@example.com",
+          "password_hash": "$2b$12$6BitkPFI5l/ad.XWwxXGQ.4MQLpEa7PQDRl./povpxL4T0twq9FAC",
+          "full_name": "张医生",
+          "role": "DOCTOR",
+          "is_active": true,
+          "created_at": "2026-03-06 12:41:59.630147+08:00",
+          "updated_at": "2026-03-14 20:48:32.282196+08:00"
+        },
+        {
+          "id": 14,
+          "username": "admin",
+          "email": "admin@example.com",
+          "password_hash": "$pbkdf2-sha256$29000$oVRKqbUWohTC2BtDCGGMkQ$7NFD1ahnaYKYqB7M4AZDo/WjyfqX1v5qnownXfG7b/c",
+          "full_name": "System Admin",
+          "role": "ADMIN",
+          "is_active": true,
+          "created_at": "2026-03-18 13:51:48.619895+08:00",
+          "updated_at": "2026-03-18 13:51:48.619895+08:00"
+        },
+        {
+          "id": 15,
+          "username": "doctor",
+          "email": "doctor@example.com",
+          "password_hash": "$pbkdf2-sha256$29000$whgDgHDu/Z8TYsyZUwqhFA$x/YOuimAfWu77Ly6tjqfi4tniM79/MX7HbBXzJ7c1U8",
+          "full_name": "Doctor Zhang",
+          "role": "DOCTOR",
+          "is_active": true,
+          "created_at": "2026-03-18 13:51:48.623974+08:00",
+          "updated_at": "2026-03-18 13:51:48.623974+08:00"
+        },
+        {
+          "id": 16,
+          "username": "patient",
+          "email": "patient@example.com",
+          "password_hash": "$pbkdf2-sha256$29000$fq/13ptzTklpTendu7fWeg$2yi1k/vytbZwaeHFC2gYV3kXquGOkZfhAWOPik9aArI",
+          "full_name": "Patient Wang",
+          "role": "PATIENT",
+          "is_active": true,
+          "created_at": "2026-03-18 13:51:48.639772+08:00",
+          "updated_at": "2026-03-18 13:51:48.639772+08:00"
+        },
+        {
+          "id": 17,
+          "username": "testuser",
+          "email": "testuser@example.com",
+          "password_hash": "$pbkdf2-sha256$29000$DGEsBSDEuNd6L4VQqpWSEg$EEO0VzhIHgjOhWy4el/gAzZvgOkAqtGwQ3/CetZBlHU",
+          "full_name": "测试用户",
+          "role": "PATIENT",
+          "is_active": true,
+          "created_at": "2026-03-18 15:11:46.781232+08:00",
+          "updated_at": "2026-03-18 15:11:46.781232+08:00"
+        },
+        {
+          "id": 18,
+          "username": "drzhang",
+          "email": "drzhang@example.com",
+          "password_hash": "$pbkdf2-sha256$29000$GgOAsBaC8N67txYC4NwbYw$14B4d67ta0jkh2SdjYm4FUvS3Qao8L331wvmMubtkdA",
+          "full_name": "张医生",
+          "role": "DOCTOR",
+          "is_active": true,
+          "created_at": "2026-03-18 15:12:25.654242+08:00",
+          "updated_at": "2026-03-18 15:12:25.654242+08:00"
+        },
+        {
+          "id": 19,
+          "username": "patientlisi",
+          "email": "lisi@example.com",
+          "password_hash": "$pbkdf2-sha256$29000$r5UyBoBQCqFU6j2HEAIgBA$kFE/7xVqidrHSAH60DdCkbeXyBaMDfv98RACaNpaioE",
+          "full_name": "李四",
+          "role": "PATIENT",
+          "is_active": true,
+          "created_at": "2026-03-18 15:12:25.680551+08:00",
+          "updated_at": "2026-03-18 15:12:25.680551+08:00"
+        },
+        {
+          "id": 20,
+          "username": "p",
+          "email": "xinqiang1231@outlook.co",
+          "password_hash": "$pbkdf2-sha256$29000$2vu/F.L8P0eo1bqXkrJWSg$LpMnuk8zGe9YqgP95evugnGJ3kElWePMF556XmNy1CU",
+          "full_name": "杨晨",
+          "role": "PATIENT",
+          "is_active": true,
+          "created_at": "2026-04-08 18:45:20.258250+08:00",
+          "updated_at": "2026-04-08 18:45:20.258250+08:00"
+        }
+      ]
+    },
+    "doctor_patient": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('doctor_patient_id_seq'::regclass)"
+        },
+        {
+          "name": "doctor_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        }
+      ],
+      "data": [
+        {
+          "id": 1,
+          "doctor_id": 18,
+          "patient_id": 19,
+          "created_at": "2026-03-18 15:14:06.648669+08:00"
+        },
+        {
+          "id": 2,
+          "doctor_id": 15,
+          "patient_id": 19,
+          "created_at": "2026-03-18 15:19:51.441799+08:00"
+        },
+        {
+          "id": 3,
+          "doctor_id": 18,
+          "patient_id": 16,
+          "created_at": "2026-03-21 13:03:46.626834+08:00"
+        }
+      ]
+    },
+    "doctor_requests": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('doctor_requests_id_seq'::regclass)"
+        },
+        {
+          "name": "doctor_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(8)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        }
+      ],
+      "data": [
+        {
+          "id": 1,
+          "doctor_id": 6,
+          "patient_id": 16,
+          "status": "PENDING",
+          "created_at": "2026-03-18 14:44:44.913895+08:00",
+          "updated_at": "2026-03-18 14:44:44.913895+08:00"
+        },
+        {
+          "id": 2,
+          "doctor_id": 18,
+          "patient_id": 19,
+          "status": "ACCEPTED",
+          "created_at": "2026-03-18 15:13:26.657704+08:00",
+          "updated_at": "2026-03-18 15:14:06.643357+08:00"
+        },
+        {
+          "id": 3,
+          "doctor_id": 15,
+          "patient_id": 19,
+          "status": "ACCEPTED",
+          "created_at": "2026-03-18 15:19:29.851414+08:00",
+          "updated_at": "2026-03-18 15:19:51.439062+08:00"
+        },
+        {
+          "id": 5,
+          "doctor_id": 10,
+          "patient_id": 16,
+          "status": "PENDING",
+          "created_at": "2026-03-20 23:06:07.811310+08:00",
+          "updated_at": "2026-03-20 23:06:07.811310+08:00"
+        },
+        {
+          "id": 4,
+          "doctor_id": 18,
+          "patient_id": 16,
+          "status": "ACCEPTED",
+          "created_at": "2026-03-20 23:06:04.560611+08:00",
+          "updated_at": "2026-03-21 13:03:46.619268+08:00"
+        },
+        {
+          "id": 6,
+          "doctor_id": 7,
+          "patient_id": 16,
+          "status": "PENDING",
+          "created_at": "2026-03-21 18:02:17.502129+08:00",
+          "updated_at": "2026-03-21 18:02:17.502129+08:00"
+        },
+        {
+          "id": 7,
+          "doctor_id": 7,
+          "patient_id": 19,
+          "status": "PENDING",
+          "created_at": "2026-03-21 20:09:11.739043+08:00",
+          "updated_at": "2026-03-21 20:09:11.739043+08:00"
+        }
+      ]
+    },
+    "health_data": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('health_data_id_seq'::regclass)"
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "data_type",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "value",
+          "type": "DOUBLE PRECISION",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "recorded_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        },
+        {
+          "name": "notes",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null
+        }
+      ],
+      "data": [
+        {
+          "id": 1,
+          "patient_id": 16,
+          "data_type": "blood_pressure",
+          "value": 2.0,
+          "unit": "k",
+          "recorded_at": "2026-03-20 22:57:45.651722+08:00",
+          "notes": null
+        },
+        {
+          "id": 11,
+          "patient_id": 19,
+          "data_type": "height",
+          "value": 180.0,
+          "unit": "cm",
+          "recorded_at": "2026-03-29 19:17:09.551357+08:00",
+          "notes": null
+        },
+        {
+          "id": 12,
+          "patient_id": 19,
+          "data_type": "weight",
+          "value": 68.0,
+          "unit": "kg",
+          "recorded_at": "2026-03-29 19:17:23.749103+08:00",
+          "notes": null
+        },
+        {
+          "id": 13,
+          "patient_id": 19,
+          "data_type": "blood_sugar",
+          "value": 78.0,
+          "unit": "mmol/L",
+          "recorded_at": "2026-03-29 19:22:07.787823+08:00",
+          "notes": null
+        },
+        {
+          "id": 14,
+          "patient_id": 19,
+          "data_type": "blood_sugar",
+          "value": 55.0,
+          "unit": "mmol/L",
+          "recorded_at": "2026-04-03 13:57:38.659568+08:00",
+          "notes": null
+        },
+        {
+          "id": 15,
+          "patient_id": 19,
+          "data_type": "weight",
+          "value": 55.0,
+          "unit": "kg",
+          "recorded_at": "2026-04-03 13:59:08.359957+08:00",
+          "notes": null
+        },
+        {
+          "id": 16,
+          "patient_id": 19,
+          "data_type": "heart_rate",
+          "value": 60.0,
+          "unit": "bpm",
+          "recorded_at": "2026-04-03 13:59:23.423905+08:00",
+          "notes": null
+        },
+        {
+          "id": 17,
+          "patient_id": 19,
+          "data_type": "blood_sugar",
+          "value": 44.5,
+          "unit": "mmol/L",
+          "recorded_at": "2026-04-04 22:28:24.187567+08:00",
+          "notes": null
+        },
+        {
+          "id": 18,
+          "patient_id": 19,
+          "data_type": "cholesterol",
+          "value": 67.0,
+          "unit": "mmol/L",
+          "recorded_at": "2026-04-07 23:53:38.539147+08:00",
+          "notes": null
+        }
+      ]
+    },
+    "medical_records": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('medical_records_id_seq'::regclass)"
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "doctor_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "diagnosis",
+          "type": "TEXT",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "treatment_plan",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        },
+        {
+          "name": "visit_date",
+          "type": "DATE",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "department",
+          "type": "VARCHAR(100)",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "image_paths",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        }
+      ],
+      "data": [
+        {
+          "id": 63,
+          "patient_id": 19,
+          "doctor_id": 6,
+          "diagnosis": "1",
+          "treatment_plan": null,
+          "notes": null,
+          "created_at": "2026-04-08 20:29:48.510108+08:00",
+          "updated_at": "2026-04-08 20:29:48.510108+08:00",
+          "visit_date": "2026-04-03",
+          "department": "sdf",
+          "image_paths": "medical_records/20260408_202948_3.jpg"
+        }
+      ]
+    },
+    "treatment_plans": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('treatment_plans_id_seq'::regclass)"
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "medication_name",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "dosage",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "frequency",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "duration",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "instructions",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(9)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": false,
+          "default": null
+        }
+      ],
+      "data": [
+        {
+          "id": 3,
+          "patient_id": 19,
+          "medication_name": "12",
+          "dosage": "同意后",
+          "frequency": "地方发货",
+          "duration": "电话",
+          "instructions": "",
+          "status": "ACTIVE",
+          "created_at": "2026-04-06 10:28:40.866471",
+          "updated_at": "2026-04-06 10:28:40.866475"
+        },
+        {
+          "id": 4,
+          "patient_id": 19,
+          "medication_name": "1",
+          "dosage": "1",
+          "frequency": "1",
+          "duration": "1",
+          "instructions": null,
+          "status": "ACTIVE",
+          "created_at": "2026-04-08 12:12:56.462743",
+          "updated_at": "2026-04-08 12:12:56.462746"
+        },
+        {
+          "id": 2,
+          "patient_id": 19,
+          "medication_name": "88",
+          "dosage": "88",
+          "frequency": "12",
+          "duration": "88",
+          "instructions": "88",
+          "status": "ACTIVE",
+          "created_at": "2026-04-06 09:49:58.940384",
+          "updated_at": "2026-04-08 12:19:52.881959"
+        }
+      ]
+    },
+    "patients": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('patients_id_seq'::regclass)"
+        },
+        {
+          "name": "user_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "gender",
+          "type": "VARCHAR(10)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "height",
+          "type": "DOUBLE PRECISION",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "weight",
+          "type": "DOUBLE PRECISION",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "blood_type",
+          "type": "VARCHAR(5)",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "address",
+          "type": "VARCHAR(200)",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "phone_number",
+          "type": "VARCHAR(20)",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "emergency_contact",
+          "type": "VARCHAR(100)",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "medical_history",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "allergies",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": null
+        }
+      ],
+      "data": []
+    },
+    "health_records": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('health_records_id_seq'::regclass)"
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "record_type",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "value",
+          "type": "DOUBLE PRECISION",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR(10)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "measured_at",
+          "type": "TIMESTAMP",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": "now()"
+        }
+      ],
+      "data": []
+    },
+    "messages": {
+      "structure": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": "nextval('messages_id_seq'::regclass)"
+        },
+        {
+          "name": "patient_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "doctor_id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "sender_type",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "content",
+          "type": "TEXT",
+          "nullable": false,
+          "default": null
+        },
+        {
+          "name": "read",
+          "type": "BOOLEAN",
+          "nullable": true,
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": true,
+          "default": null
+        }
+      ],
+      "data": [
+        {
+          "id": 4,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "轻微",
+          "read": false,
+          "created_at": "2026-03-21 04:52:13.336452"
+        },
+        {
+          "id": 5,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "是否合适",
+          "read": false,
+          "created_at": "2026-03-21 04:52:34.506418"
+        },
+        {
+          "id": 6,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "34234",
+          "read": false,
+          "created_at": "2026-03-21 05:03:34.498815"
+        },
+        {
+          "id": 7,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "asdasd",
+          "read": true,
+          "created_at": "2026-03-21 05:06:37.414850"
+        },
+        {
+          "id": 8,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "asdas",
+          "read": true,
+          "created_at": "2026-03-21 05:06:38.361946"
+        },
+        {
+          "id": 9,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "asdaads",
+          "read": true,
+          "created_at": "2026-03-21 05:06:39.870668"
+        },
+        {
+          "id": 10,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "dfhg",
+          "read": false,
+          "created_at": "2026-03-21 05:07:54.375062"
+        },
+        {
+          "id": 11,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "fsdf",
+          "read": true,
+          "created_at": "2026-03-21 05:08:27.644985"
+        },
+        {
+          "id": 12,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "dgfh",
+          "read": true,
+          "created_at": "2026-03-21 06:42:30.019506"
+        },
+        {
+          "id": 15,
+          "patient_id": 19,
+          "doctor_id": 15,
+          "sender_type": "doctor",
+          "content": "gfgh",
+          "read": false,
+          "created_at": "2026-03-21 07:02:38.846713"
+        },
+        {
+          "id": 13,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "你好",
+          "read": true,
+          "created_at": "2026-03-21 07:00:40.369312"
+        },
+        {
+          "id": 14,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "read": true,
+          "created_at": "2026-03-21 07:00:53.731466"
+        },
+        {
+          "id": 16,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "read": true,
+          "created_at": "2026-03-21 07:03:47.537523"
+        },
+        {
+          "id": 17,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+          "read": false,
+          "created_at": "2026-03-21 07:05:15.356385"
+        },
+        {
+          "id": 18,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "sdf",
+          "read": false,
+          "created_at": "2026-03-21 07:22:18.732446"
+        },
+        {
+          "id": 19,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "hy",
+          "read": true,
+          "created_at": "2026-03-21 07:55:29.945335"
+        },
+        {
+          "id": 20,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "awer",
+          "read": false,
+          "created_at": "2026-03-21 08:20:25.667868"
+        },
+        {
+          "id": 21,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "456",
+          "read": false,
+          "created_at": "2026-03-21 08:43:39.023028"
+        },
+        {
+          "id": 22,
+          "patient_id": 16,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "13423",
+          "read": true,
+          "created_at": "2026-03-21 10:02:27.914677"
+        },
+        {
+          "id": 23,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "78",
+          "read": true,
+          "created_at": "2026-03-21 10:44:42.476617"
+        },
+        {
+          "id": 24,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "23",
+          "read": true,
+          "created_at": "2026-03-21 12:06:42.662851"
+        },
+        {
+          "id": 25,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "123",
+          "read": true,
+          "created_at": "2026-03-21 12:08:21.527005"
+        },
+        {
+          "id": 26,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "qw",
+          "read": true,
+          "created_at": "2026-03-25 16:32:42.621241"
+        },
+        {
+          "id": 27,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "gh",
+          "read": true,
+          "created_at": "2026-03-25 16:32:46.026287"
+        },
+        {
+          "id": 28,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "23",
+          "read": true,
+          "created_at": "2026-03-28 14:20:53.940304"
+        },
+        {
+          "id": 29,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "34",
+          "read": true,
+          "created_at": "2026-03-28 14:22:56.359532"
+        },
+        {
+          "id": 30,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "4",
+          "read": true,
+          "created_at": "2026-03-28 14:22:58.865664"
+        },
+        {
+          "id": 31,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "qwe",
+          "read": true,
+          "created_at": "2026-03-28 14:25:11.104487"
+        },
+        {
+          "id": 32,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "4",
+          "read": true,
+          "created_at": "2026-03-28 14:27:12.752753"
+        },
+        {
+          "id": 33,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "23",
+          "read": true,
+          "created_at": "2026-03-28 14:28:27.536413"
+        },
+        {
+          "id": 34,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "23",
+          "read": true,
+          "created_at": "2026-03-28 14:29:18.615010"
+        },
+        {
+          "id": 35,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "hg",
+          "read": true,
+          "created_at": "2026-03-28 14:30:13.517111"
+        },
+        {
+          "id": 36,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "2",
+          "read": true,
+          "created_at": "2026-04-03 06:17:55.137432"
+        },
+        {
+          "id": 37,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "高血压患者日常饮食需要注意什么？",
+          "read": true,
+          "created_at": "2026-04-03 06:18:00.803172"
+        },
+        {
+          "id": 38,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "千问",
+          "read": false,
+          "created_at": "2026-04-05 07:26:30.946041"
+        },
+        {
+          "id": 39,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "12",
+          "read": false,
+          "created_at": "2026-04-06 08:32:04.019352"
+        },
+        {
+          "id": 40,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "34",
+          "read": false,
+          "created_at": "2026-04-06 08:32:05.805049"
+        },
+        {
+          "id": 41,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "doctor",
+          "content": "123",
+          "read": false,
+          "created_at": "2026-04-06 10:05:08.936603"
+        },
+        {
+          "id": 42,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "12",
+          "read": true,
+          "created_at": "2026-04-06 10:28:03.176364"
+        },
+        {
+          "id": 43,
+          "patient_id": 19,
+          "doctor_id": 18,
+          "sender_type": "patient",
+          "content": "23",
+          "read": true,
+          "created_at": "2026-04-08 10:29:36.442293"
+        }
+      ]
+    }
+  },
+  "database_config": {
+    "user": "postgres",
+    "password": "123456",
+    "host": "localhost",
+    "port": "5432",
+    "name": "postgres"
+  }
+}

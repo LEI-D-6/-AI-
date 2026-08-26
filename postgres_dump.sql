@@ -1,0 +1,22 @@
+-- PostgreSQL数据库导出
+-- 数据库: postgres
+-- 主机: localhost
+-- 端口: 5432
+-- 用户名: postgres
+
+-- 表列表:
+--   - users
+--   - doctor_patient
+--   - doctor_requests
+--   - health_data
+--   - medical_records
+--   - treatment_plans
+--   - patients
+--   - health_records
+--   - messages
+
+-- 导出说明:
+-- 1. 确保PostgreSQL已安装并运行
+-- 2. 使用以下命令导出完整数据库:
+--    pg_dump -h localhost -p 5432 -U postgres -d postgres -f postgres_full_dump.sql
+-- 3. 输入密码时使用: {settings.POSTGRES_PASSWORD}

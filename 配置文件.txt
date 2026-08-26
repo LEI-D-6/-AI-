@@ -1,0 +1,88 @@
+第一步：安装基础软件
+
+1. 安装 Python 3.12 或 3.13
+
+2. 安装 PostgreSQL 15 或更高版本
+
+3. 安装 MongoDB 4.0 或更高版本
+
+4. 安装 Node.js 18 或更高版本
+
+第二步：复制项目文件
+
+将整个项目文件夹复制到新电脑，例如 D:\ASD\
+确保以下文件存在：
+- backend\requirements.txt
+- backend\fix_sqlalchemy.py
+- backend\import_postgres.py
+- backend\import_mongodb.py
+- backend\postgres_dump.json
+- backend\mongodb_dump.json
+- backend\.env
+- backend\start.py
+- frontend\package.json
+
+第三步：配置后端环境
+
+1. 创建虚拟环境
+   cd D:\ASD
+   python -m venv .venv
+   .venv\Scripts\Activate.ps1
+
+2. 安装依赖
+   python -m pip install --upgrade pip
+   pip install -r backend/requirements.txt
+
+3. 修复 SQLAlchemy
+   python backend/fix_sqlalchemy.py
+   预期输出：已修复: psycopg2.py
+
+4. 配置环境变量
+   编辑 backend\.env，修改 PostgreSQL 密码：
+   POSTGRES_PASSWORD=你的新电脑PostgreSQL密码
+
+第四步：导入数据库数据
+
+1. 清空并导入 PostgreSQL
+   cd backend
+   修改密码
+   清空旧表：& "C:\Program Files\PostgreSQL\15\bin\psql.exe" -h localhost -p 5432 -U postgres -d postgres -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"（"C:\Program Files\PostgreSQL\15\bin\psql.exe"）你的路径
+   导入数据：python import_postgres.py
+
+2. 导入 MongoDB
+   python import_mongodb.py
+
+第五步：启动后端
+
+python start.py
+成功标志：Uvicorn running on http://0.0.0.0:8000
+
+第六步：配置并启动前端
+
+打开新终端：
+cd D:\ASD\frontend
+npm install
+npm run dev
+成功标志：Local: http://localhost:3000/
+
+第七步：验证系统
+
+1. 浏览器访问 http://localhost:3000
+2. 使用测试账号登录：
+   用户名：patientlisi
+   密码：password123
+3. 检查健康数据、AI分析等功能
+
+常见问题快速处理
+
+问题：Unknown PG numeric type: 1043
+解决：执行 python backend/fix_sqlalchemy.py
+
+问题：端口被占用
+解决：关闭占用端口的进程或重启电脑
+
+问题：CORS 错误
+解决：检查 main.py 中 CORS 配置
+
+问题：登录失败
+解决：确认 .env 中密码正确

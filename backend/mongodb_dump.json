@@ -1,0 +1,14 @@
+{
+  "collections": {
+    "health_records": [],
+    "medical_notes": []
+  },
+  "roles": {
+    "roles": [],
+    "ok": 1.0
+  },
+  "database_config": {
+    "url": "mongodb://localhost:27017",
+    "db": "chronic_disease"
+  }
+}

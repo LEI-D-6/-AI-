@@ -1,0 +1,41 @@
+# 核心Web框架和服务器
+fastapi>=0.129.0
+uvicorn>=0.40.0
+
+# 数据库相关
+sqlalchemy==1.4.54
+psycopg2-binary==2.9.11
+pymongo>=4.16.0
+motor>=3.7.1
+
+# 认证和安全
+passlib[bcrypt]>=1.7.4
+python-jose[cryptography]>=3.5.0
+email-validator>=2.2.0
+
+# 数据处理
+pandas>=3.0.0
+numpy>=2.4.2
+
+# AI相关
+# 注意：项目中使用了DeepSeek API和百度千问API，但未使用本地AI模型
+# paddlepaddle和openai未被实际使用
+
+# 其他工具
+python-dotenv>=1.2.1
+python-multipart>=0.0.22
+pydantic>=2.12.5
+pydantic-settings>=2.12.0
+requests>=2.32.5
+
+# 依赖项
+anyio>=3.7.1
+click>=8.3.1
+colorama>=0.4.6
+h11>=0.16.0
+httpcore>=1.0.9
+httpx>=0.28.1
+idna>=3.11
+typing-extensions>=4.15.0
+tzdata>=2025.3
+urllib3>=2.6.3
