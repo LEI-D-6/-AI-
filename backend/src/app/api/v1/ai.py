@@ -116,7 +116,7 @@ async def analyze_data(data: Dict[str, Any], current_user: User = Depends(get_cu
 请用纯文本格式回复，不要使用任何 Markdown 格式符号（如 *、#、-、` 等）。
 直接以自然段落的形式输出分析内容。"""
         
-        api_key = os.getenv('DEEPSEEK_API_KEY', 'sk-6b4b8259f83940f9b0985f5c2153b129')
+        api_key = os.getenv('DEEPSEEK_API_KEY', '')
         api_url = 'https://api.deepseek.com/v1/chat/completions'
         
         headers = {'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'}
@@ -140,8 +140,8 @@ async def analyze_data(data: Dict[str, Any], current_user: User = Depends(get_cu
         raise HTTPException(status_code=500, detail=f"数据分析失败: {str(e)}")
 
 # 百度云密钥
-API_KEY = "tKMWZXh2vZpBlWWgLxYO6ZvY"
-SECRET_KEY = "s08EPu3JqgqmNREeywrowk6WBGdScfXo"
+API_KEY = ""
+SECRET_KEY = ""
 
 # 营养数据库（热量：kcal / 每100g）
 nutrition_map = {
@@ -191,7 +191,7 @@ def get_access_token():
 def get_deepseek_analysis(food_name, nutrition, user_health):
     try:
         # deepseek API配置
-        api_key = "sk-6b4b8259f83940f9b0985f5c2153b129"
+        api_key = ""
         url = "https://api.deepseek.com/chat/completions"
         
         # 构建请求体
